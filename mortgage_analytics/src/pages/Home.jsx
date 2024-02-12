@@ -21,32 +21,32 @@ const Home = () => {
                     <Col xs lg="6">
                         <h1>Introduction</h1>
                         <p>
-                        Welcome to MortgageFlow, the premier destination where innovation meets expertise to redefine the mortgage experience. Our platform is designed with one goal in mind: to empower you on your journey to homeownership. We understand that the path to owning your dream home can often be fraught with challenges. From navigating the labyrinth of paperwork to enduring the uncertainties of approval processes and facing the frustrations of delays, the traditional mortgage journey can feel overwhelming.
+                        Welcome to Mortgage Analytics, the premier destination where innovation meets expertise to redefine the mortgage experience. Our platform is designed with one goal in mind: to empower you on your journey to homeownership. We understand that the path to owning your dream home can often be fraught with challenges. From navigating the labyrinth of paperwork to enduring the uncertainties of approval processes and facing the frustrations of delays, the traditional mortgage journey can feel overwhelming.
                         </p>
                         <p>
-                        At MortgageFlow, we're committed to changing that narrative. We've created a space where efficiency, transparency, and customer-centricity converge to make your homeownership dreams a reality. With MortgageFlow, you're not just a borrower; you're a valued partner in a journey towards achieving your aspirations of owning a home.
+                        At Mortgage Analytics, we're committed to changing that narrative. We've created a space where efficiency, transparency, and customer-centricity converge to make your homeownership dreams a reality. With Mortgage Analytics, you're not just a borrower; you're a valued partner in a journey towards achieving your aspirations of owning a home.
                         </p>
                         <img src={Photo1} alt="Photo 1" />
                         <h1>Streamlining Mortgages</h1>
                         <p>
-                        At MortgageFlow, we're passionate about streamlining your path to homeownership. Our innovative platform integrates cutting-edge technology, data analytics, and industry expertise to dissect the mortgage process from every angle. We leave no stone unturned in identifying bottlenecks, inefficiencies, and pain points that often plague the traditional mortgage journey.
+                        At Mortgage Analytics, we're passionate about streamlining your path to homeownership. Our innovative platform integrates cutting-edge technology, data analytics, and industry expertise to dissect the mortgage process from every angle. We leave no stone unturned in identifying bottlenecks, inefficiencies, and pain points that often plague the traditional mortgage journey.
                         </p>
                         <p>
-                        By leveraging our deep understanding of the mortgage landscape, we've developed tailored solutions to address these challenges head-on. From simplifying the application process to expediting approvals and minimizing paperwork, MortgageFlow is committed to making your journey smoother, faster, and more intuitive.
+                        By leveraging our deep understanding of the mortgage landscape, we've developed tailored solutions to address these challenges head-on. From simplifying the application process to expediting approvals and minimizing paperwork, Mortgage Analytics is committed to making your journey smoother, faster, and more intuitive.
                         </p>
                         <p>
-                        We believe that homeownership should be within reach for everyone, and our mission is to remove the barriers that stand in your way. With MortgageFlow, you can navigate the mortgage landscape with confidence, knowing that you have a dedicated partner by your side every step of the way.
+                        We believe that homeownership should be within reach for everyone, and our mission is to remove the barriers that stand in your way. With Mortgage Analytics, you can navigate the mortgage landscape with confidence, knowing that you have a dedicated partner by your side every step of the way.
                         </p>
                         <img src={Photo3} alt="Photo 3" />
                         <h1>Our Mission </h1>
                         <p>
-                        When it comes to navigating the complexities of the mortgage process, MortgageFlow is your trusted ally. Whether you're a first-time buyer dipping your toes into the real estate market, a seasoned homeowner looking to refinance, or an investor seeking financing for your next property venture, we're here to support you.
+                        When it comes to navigating the complexities of the mortgage process, Mortgage Analytics is your trusted ally. Whether you're a first-time buyer dipping your toes into the real estate market, a seasoned homeowner looking to refinance, or an investor seeking financing for your next property venture, we're here to support you.
                         </p>
                         <p>
                         Our team of experienced professionals is committed to providing personalized guidance and support tailored to your unique needs and circumstances. We understand that every borrower is different, and we take the time to listen, understand, and guide you through the process with care and expertise.
                         </p>
                         <p>
-                        With MortgageFlow, you can say goodbye to the frustrations of the past and embrace a new era of homeownership. We're not just here to facilitate transactions; we're here to build relationships, foster trust, and help you achieve your homeownership goals. So why wait? Dive into the MortgageFlow experience today, and let's embark on the journey to your new home together.
+                        With Mortgage Analytics, you can say goodbye to the frustrations of the past and embrace a new era of homeownership. We're not just here to facilitate transactions; we're here to build relationships, foster trust, and help you achieve your homeownership goals. So why wait? Dive into the Mortgage Analytics experience today, and let's embark on the journey to your new home together.
                         </p>
                     </Col>
                 </Row>
