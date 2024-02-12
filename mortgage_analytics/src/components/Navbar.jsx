@@ -8,7 +8,7 @@ function AppNavbar() {
     <div>
         <Navbar expand="lg" className="bg-body-tertiary" bg="primary">
         <Container>
-            <Navbar.Brand href="/">Mortgage</Navbar.Brand>
+            <Navbar.Brand href="/">Mortgage Analytics</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
