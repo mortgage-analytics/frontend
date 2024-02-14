@@ -1,10 +1,11 @@
 const Data = () => {
-    return (
-        <div>
-             
-<header>
+  return (
+    <div>
+
+      <header>
         <h1 style={{ textAlign: "centre" }}>Bottlenecks</h1>
       </header>
+      
       <main style={{ marginTop: "20px", marginLeft: "100px", textAlign: "center" }}>
         <p style={{ textAlign: "left" }}>Red</p>
         <ul style={{ textAlign: "left" }}>
@@ -26,8 +27,9 @@ const Data = () => {
           <li>Stringent Underwriting Standards</li>
         </ul>
       </main>
-        </div>
-    );
+
+    </div>
+  );
 };
 
 export default Data;
