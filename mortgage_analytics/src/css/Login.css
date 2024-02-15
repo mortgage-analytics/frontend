@@ -1,0 +1,27 @@
+.login-container{
+    width: 400px;
+    margin: 110px  auto 0; 
+    padding: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+ .mb-3{
+    width: 95%;
+}
+
+.btn{
+    width: 95%;
+}
+
+.forgot-password{
+    text-align: center;
+    padding: 30px;
+}
+
+.sign-up{
+    text-align: center;
+
+}
