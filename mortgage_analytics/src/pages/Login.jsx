@@ -1,6 +1,10 @@
 import '../css/Login.css';
 import { useState } from 'react';
+import axios from "axios";
 import Form from 'react-bootstrap/Form';
+
+const baseURL = "http://localhost:8080/api/auth/signin";
+
 const Login = () => {
 
     const [form, setForm] = useState({});
@@ -14,8 +18,16 @@ const Login = () => {
     }    
 
     const handleSubmit = e => {
-        e.preventDefault()
-        console.log(form)
+        e.preventDefault();
+        axios
+        .post(baseURL, {
+          email:"hello@hello.com",
+          password:"abc123absN!"
+        })
+        .then((response) => {
+          console.log(response.data);
+        })
+        .catch(error => console.log(error));
     }
 
     return (
