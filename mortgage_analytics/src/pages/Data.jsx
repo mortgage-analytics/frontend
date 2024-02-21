@@ -15,9 +15,9 @@ const data02 = [
   { name: 'A2', value: 300 },
   { name: 'A3', value: 200 },
   { name: 'B1', value: 80 },
-  { name: 'B2', value: 70 },
+  { name: 'B2', value: 95 },
   { name: 'B3', value: 50 },
-  { name: 'B4', value: 95 },
+  { name: 'B4', value: 37 },
   { name: 'C1', value: 15 },
   { name: 'C2', value: 20 },
   { name: 'C3', value: 30 },
@@ -25,7 +25,7 @@ const data02 = [
 
 const COLORS = ['#FF0000', '#00C49F', '#FFBB28'];
 
-const INNERCOLORS = ['#FF0000', '#FF0000', '#FF0000', '#00C49F', '#00C49F', '#00C49F','#00C49F', '#FFBB28', '#FFBB28', '#FFBB28'];
+const INNERCOLORS = ['#FF0000', '#FF0000', '#FF0000', '#FFBB28', '#FFBB28', '#FFBB28', '#00C49F', '#00C49F', '#00C49F','#00C49F'];
 
 const Data = () => {
   return (
