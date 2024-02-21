@@ -3,7 +3,8 @@ import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import React, { PureComponent } from 'react';
 import { render } from "react-dom";
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Sector, Cell } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data01 = [
   { name: 'Group A', value: 700 },//RED
@@ -22,6 +23,7 @@ const data02 = [
   { name: 'C2', value: 20 },
   { name: 'C3', value: 30 },
 ];
+
 
 const COLORS = ['#FF0000', '#00C49F', '#FFBB28'];
 
