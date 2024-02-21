@@ -21,13 +21,19 @@ const Login = () => {
         e.preventDefault();
         axios
         .post(baseURL, {
-          email:"hello@hello.com",
-          password:"abc123absN!"
+            email:form.email,
+            password:form.password
         })
         .then((response) => {
-          console.log(response.data);
+            if(response.data == "Cookie set successfully!"){
+                alert("Signed in successfully");
+                window.location.href = './';
+            }
         })
-        .catch(error => console.log(error));
+        .catch((error) => {
+            alert("Incorrect email or password"); 
+            console.log(error);
+        });
     }
 
     return (
