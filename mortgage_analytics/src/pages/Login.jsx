@@ -1,6 +1,22 @@
 import '../css/Login.css';
 import Form from 'react-bootstrap/Form';
 const Login = () => {
+
+    const [form, setForm] = useState({});
+
+
+    const setField = (field, value) => {
+        setForm({
+            ...form,
+            [field]:value
+        })
+    }    
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        console.log(form)
+    }
+
     return (
         <div className="login-container">
             <h6>Welcome Back</h6>
@@ -9,13 +25,19 @@ const Login = () => {
             <Form>
                 <Form.Group className="mb-3" controlId="formGroupEmail">
                     <Form.Label>Email</Form.Label>
-                    <Form.Control type="email" />
+                    <Form.Control 
+                        value={form.email}
+                        onChange={(e) => setField('email', e.target.value)} 
+                        type="email" />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formGroupPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" />
+                    <Form.Control 
+                        value={form.password}
+                        onChange={(e) => setField('password', e.target.value)} 
+                        type="password" />
                 </Form.Group>
-                <button type="submit" className="btn btn-primary">Continue</button>
+                <button type="submit" onClick={handleSubmit} className="btn btn-primary">Continue</button>
             </Form>
 
             <p className="forgot-password">
