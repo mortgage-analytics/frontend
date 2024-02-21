@@ -23,7 +23,7 @@ const Login = () => {
             </p>
 
             <p className="sign-up">
-            Don't have an account?   <a href="#">Sign up</a> 
+            Don't have an account?   <a href="/sign-up">Sign up</a> 
             </p>
 
         </div>
