@@ -12,37 +12,37 @@ import { BarChart, Bar, Rectangle, ResponsiveContainer } from 'recharts';
 const dataWithoutUV = [
     {
       name: 'Credit Check',
-      pv: 2400,
+      Delay: 2400,
       amt: 2400,
     },
     {
       name: 'Property Appraisal',
-      pv: 1398,
+      Delay: 1398,
       amt: 2210,
     },
     {
       name: 'Income Verification',
-      pv: 9800,
+      Delay: 9800,
       amt: 2290,
     },
     {
       name: 'Loan Approval',
-      pv: 3908,
+      Delay: 3908,
       amt: 2000,
     },
     {
       name: 'Insurance Processing',
-      pv: 4800,
+      Delay: 4800,
       amt: 2181,
     },
     {
       name: 'Document Preparation',
-      pv: 3800,
+      Delay: 3800,
       amt: 2500,
     },
     {
       name: 'Legal Review',
-      pv: 4300,
+      Delay: 4300,
       amt: 2100,
     },
   ];
@@ -180,7 +180,7 @@ const Home = () => {
                                 <YAxis />
                                 <Tooltip />
                                 <Legend />
-                                <Bar dataKey="pv" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
+                                <Bar dataKey="Delay" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
                             </BarChart>
                         </div>
                         <h1>Our Mission </h1>
