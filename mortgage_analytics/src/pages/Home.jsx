@@ -132,6 +132,8 @@ const Home = () => {
                         <p>
                         At Mortgage Analytics, we're committed to changing that narrative. We've created a space where efficiency, transparency, and customer-centricity converge to make your homeownership dreams a reality. With Mortgage Analytics, you're not just a borrower; you're a valued partner in a journey towards achieving your aspirations of owning a home.
                         </p>
+                        <br></br>
+                        <br></br>
                         <div style={{display: "flex", justifyContent:"center"}}>
                             <LineChart
                                 width={500}
@@ -153,6 +155,8 @@ const Home = () => {
                                 <Line type="monotone" dataKey="Application" stroke="#82ca9d" />
                             </LineChart>
                         </div>
+                        <br></br>
+                        <br></br>
                         <h1>Streamlining Mortgages</h1>
                         <p>
                         At Mortgage Analytics, we're passionate about streamlining your path to homeownership. Our innovative platform integrates cutting-edge technology, data analytics, and industry expertise to dissect the mortgage process from every angle. We leave no stone unturned in identifying bottlenecks, inefficiencies, and pain points that often plague the traditional mortgage journey.
@@ -163,6 +167,8 @@ const Home = () => {
                         <p>
                         We believe that homeownership should be within reach for everyone, and our mission is to remove the barriers that stand in your way. With Mortgage Analytics, you can navigate the mortgage landscape with confidence, knowing that you have a dedicated partner by your side every step of the way.
                         </p>
+                        <br></br>
+                        <br></br>
                         <div style={{display: "flex", justifyContent:"center"}}>
                             <BarChart
                                 width={500}
@@ -183,6 +189,8 @@ const Home = () => {
                                 <Bar dataKey="Delay" fill="#8884d8" activeBar={<Rectangle fill="pink" stroke="blue" />} />
                             </BarChart>
                         </div>
+                        <br></br>
+                        <br></br>
                         <h1>Our Mission </h1>
                         <p>
                         When it comes to navigating the complexities of the mortgage process, Mortgage Analytics is your trusted ally. Whether you're a first-time buyer dipping your toes into the real estate market, a seasoned homeowner looking to refinance, or an investor seeking financing for your next property venture, we're here to support you.
