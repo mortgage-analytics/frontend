@@ -15,6 +15,7 @@ function AppNavbar() {
                 <Nav.Link href="/data">Data</Nav.Link>
                 <Nav.Link href="/about">About</Nav.Link>
                 <Nav.Link href="/login">Login</Nav.Link>
+                <Nav.Link href="/leadvapp">Lead v/s Application</Nav.Link>
             </Nav>
             </Navbar.Collapse>
         </Container>
