@@ -3,7 +3,7 @@ import { useState } from 'react';
 import axios from "axios";
 import Form from 'react-bootstrap/Form';
 
-const baseURL = "http://localhost:8080/api/auth/signin";
+const baseURL = "https://mortgagebackend.azurewebsites.net/api/auth/signin";
 
 const Login = () => {
 
@@ -23,9 +23,10 @@ const Login = () => {
         .post(baseURL, {
             email:form.email,
             password:form.password
-        })
+        },
+        { withCredentials: true })
         .then((response) => {
-            if(response.data == "Cookie set successfully!"){
+            if(response.data === "Cookie set successfully!"){
                 alert("Signed in successfully");
                 window.location.href = './';
             }
@@ -60,7 +61,7 @@ const Login = () => {
             </Form>
 
             <p className="forgot-password">
-                <a href="#">Forgot your password?</a> 
+                <a href="./login">Forgot your password?</a> 
             </p>
 
             <p className="sign-up">

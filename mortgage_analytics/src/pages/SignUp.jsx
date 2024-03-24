@@ -4,7 +4,7 @@ import { useState } from 'react';
 import axios from "axios";
 
 
-const baseURL = "http://localhost:8080/api/auth/signup";
+const baseURL = "https://mortgagebackend.azurewebsites.net/api/auth/signup";
 
 const SignUp = () => {
 
@@ -24,14 +24,15 @@ const SignUp = () => {
         .post(baseURL, {
             email:form.email,
             password:form.password
-        })
+        },
+        { withCredentials: true })
         .then((response) => {
             console.log(response);
             alert("User created successfully"); 
             window.location.href = './';
         })
         .catch((error) => {
-            if(error.response.status==400){
+            if(error.response.status===400){
                 alert("Username already exists"); 
             }
             else{
