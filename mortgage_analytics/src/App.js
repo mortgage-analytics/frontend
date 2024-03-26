@@ -7,6 +7,7 @@ import Login from "./pages/Login";
 import Data from "./pages/Data";
 import LeadVApp from "./pages/LeadVApp";
 import SignUp from './pages/SignUp';
+import Overview from './pages/Overview';
 import "react-bootstrap/dist/react-bootstrap.min.js"; 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="data" element={<Data />} />
         <Route path="leadvapp" element={<LeadVApp />} />
         <Route path="sign-up" element={<SignUp />} />
+        <Route path="overview" element={<Overview />} />
       </Route>
     </Routes>
     </BrowserRouter>
