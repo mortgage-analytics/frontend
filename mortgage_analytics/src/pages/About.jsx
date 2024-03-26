@@ -3,10 +3,11 @@ import { Table } from 'react-bootstrap';
 
 const About = () => {
     return (
-        <Container fluid style={{marginTop: "100px", textAlign:"center"}}>
+        <Container fluid style={{ textAlign:"center"}}>
             <Row className="justify-content-center">
                 <Col xs={12} sm={8} md={6} lg={6}>
                     <div>
+                        <br></br>
                         <h1>About Us</h1>
                         <h5>Welcome to Group 28's Mortgage Analytics</h5>
                         <div style={{textAlign:"left"}}>
