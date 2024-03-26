@@ -8,6 +8,12 @@ import React from 'react';
 import { PieChart, Pie, Sector, Cell } from 'recharts';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { BarChart, Bar, Rectangle, ResponsiveContainer } from 'recharts';
+import { useState, useEffect } from 'react';
+import axios from "axios";
+
+const baseURL = "https://mortgagebackend.azurewebsites.net/api/data/graphs/byMonth";
+
+
 
 const dataWithoutUV = [
     {
@@ -46,73 +52,30 @@ const dataWithoutUV = [
       amt: 2100,
     },
   ];
-  
-  
-
-const lineData = [
-    {
-        name: 'January 2020',
-        Lead: 9,
-        Application: 3,
-        amt: 2350,
-    },
-    {
-        name: 'July 2020',
-        Lead: 11,
-        Application: 7,
-        amt: 2180,
-    },
-    {
-        name: 'January 2021',
-        Lead: 6,
-        Application: 3,
-        amt: 2275,
-    },
-    {
-        name: 'July 2021',
-        Lead: 14,
-        Application: 8,
-        amt: 2430,
-    },
-    {
-        name: 'January 2022',
-        Lead: 6,
-        Application: 5,
-        amt: 2215,
-    },
-    {
-        name: 'July 2022',
-        Lead: 13,
-        Application: 4,
-        amt: 2385,
-    },
-    {
-        name: 'January 2023',
-        Lead: 10,
-        Application: 5,
-        amt: 2298,
-    },
-    {
-        name: 'July 2023',
-        Lead: 7,
-        Application: 2,
-        amt: 2187,
-    },
-    {
-        name: 'January 2024',
-        Lead: 12,
-        Application: 6,
-        amt: 2455,
-    },
-    {
-        name: 'February 2024',
-        Lead: 9,
-        Application: 3,
-        amt: 2310,
-    }
-];
 
 const Home = () => {
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        axios.get(baseURL)
+            .then(response => {
+                console.log('The Response is:', response.data);
+                const backendData = response.data
+                const mergedData= backendData.map(item => ({
+                    ...item,
+                    name: item.name,
+                    Lead: item.leads,
+                    Application: item.applications
+                }));
+
+                setData(mergedData);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }, []);
+
     return (
         <div>
             <Container fluid style={{ textAlign: "center" }}>
@@ -138,7 +101,7 @@ const Home = () => {
                             <LineChart
                                 width={500}
                                 height={300}
-                                data={lineData}
+                                data={data}
                                 margin={{
                                 top: 5,
                                 right: 30,

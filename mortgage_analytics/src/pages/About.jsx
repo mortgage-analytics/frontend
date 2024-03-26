@@ -85,7 +85,7 @@ const About = () => {
 
                         <tr>
                         <td>6</td>
-                        <td>Mohamend</td>
+                        <td>Mohamed</td>
                         <td>Ali</td>
                         <td>Frontend Developer</td>
                         <td>@mohamed-k-ali</td>
