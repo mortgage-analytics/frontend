@@ -30,6 +30,10 @@ const COLORS = ['#FF0000', '#00C49F', '#FFBB28'];
 const INNERCOLORS = ['#FF0000', '#FF0000', '#FF0000', '#FFBB28', '#FFBB28', '#FFBB28', '#00C49F', '#00C49F', '#00C49F','#00C49F'];
 
 const Data = () => {
+  const redBottlenecks = ['Credit History', 'Income Verification', 'Debt To Income Ratio']; 
+  const yellowBottlenecks = ['Property Appraisal', 'Documentation Requirements', 'Market Conditions']; 
+  const greenBottlenecks = ['Regulatory Compliance', 'Applicant Work History', 'Down Payment Issues', 'Stringent Underwriting Standards'];
+
   return (
     <div>
       <Container>
@@ -38,27 +42,47 @@ const Data = () => {
             <header>
               <h1 style={{ textAlign: "centre" }}>Bottlenecks</h1>
             </header>
+            <p style={{ fontSize: '1.2em', fontWeight: 'bold' }}>There is a wide variety of bottlenecks that can occur during the mortgage application process.</p>
+            <p>Here is a summary of the bottlenecks based on wait times.</p>
+            <p>Click on a link to discover more information.</p>
 
             <main style={{ marginTop: "20px", marginLeft: "100px", textAlign: "center" }}>
-              <p style={{ textAlign: "left" }}>Red (100+ Applications)</p>
-              <ul style={{ textAlign: "left" }}>
-                <li>Credit History and Score</li>
-                <li>Income Verification</li>
-                <li>Debt to Income Ratio</li>
-              </ul>
-              <p style={{ textAlign: "left" }}><span className="yellow-underline"><span className="black-highlight">Yellow (50-99 Applications)</span></span></p>
-              <ul style={{ textAlign: "left" }}>
-                <li>Property Appraisal</li>
-                <li>Documentation Requirements</li>
-                <li>Market Conditions</li>
-              </ul>
-              <p style={{ textAlign: "left" }}><span className="green-underline">Green (1-49 Applications)</span></p>
-              <ul style={{ textAlign: "left" }}>
-                <li>Regulatory Compliance</li>
-                <li>Applicant Work History</li>
-                <li>Down Payment Issues</li>
-                <li>Stringent Underwriting Standards</li>
-              </ul>
+            <div style={{ backgroundColor: 'red', padding: '10px', borderRadius: '5px', marginBottom: '20px' }}>
+            <p>
+              Red Bottlenecks (Long Wait Times)
+            </p>
+            <ul>
+              {redBottlenecks.map((redBottlenecks, index) => (
+              <li key={index}>
+                <a href={`/${redBottlenecks.replace(/\s+/g, '-').toLowerCase()}`}>{redBottlenecks}</a>
+              </li>
+              ))}
+            </ul>
+            </div>
+            <div style={{ backgroundColor: 'yellow', padding: '10px', borderRadius: '5px', marginBottom: '20px' }}>
+            <p>
+       Yellow Bottlenecks (Medium Wait Times)
+      </p>
+      <ul>
+        {yellowBottlenecks.map((yellowBottlenecks, index) => (
+          <li key={index}>
+            <a href={`/${yellowBottlenecks}`}>{yellowBottlenecks}</a>
+          </li>
+        ))}
+      </ul>
+      </div>
+      <div style={{ backgroundColor: 'green', padding: '10px', borderRadius: '5px', marginBottom: '20px' }}>
+      <p>
+       Green Bottlenecks (Short Wait Times)
+      </p>
+      <ul>
+        {greenBottlenecks.map((greenBottlenecks, index) => (
+          <li key={index}>
+            <a href={`/${greenBottlenecks}`}>{greenBottlenecks}</a>
+          </li>
+        ))}
+      </ul>
+      </div>
             </main>
           </Col>
           <Col>
