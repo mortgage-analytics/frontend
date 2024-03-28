@@ -26,8 +26,9 @@ const Login = () => {
         },
         { withCredentials: true })
         .then((response) => {
-            if(response.data === "Cookie set successfully!"){
+            if('authToken' in response.data){
                 alert("Signed in successfully");
+				document.cookie = 'AuthToken=' + response.data['authToken']
                 window.location.href = './';
             }
         })
