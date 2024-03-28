@@ -3,7 +3,8 @@ import { useState } from 'react';
 import axios from "axios";
 import Form from 'react-bootstrap/Form';
 
-const baseURL = "https://mortgagebackend.azurewebsites.net/api/auth/signin";
+//const baseURL = "https://mortgagebackend.azurewebsites.net/api/auth/signin";
+const baseURL = "http://localhost:8080/api/auth/signin";
 
 const Login = () => {
 
@@ -26,8 +27,9 @@ const Login = () => {
         },
         { withCredentials: true })
         .then((response) => {
-            if(response.data === "Cookie set successfully!"){
+            if('authToken' in response.data){
                 alert("Signed in successfully");
+				document.cookie = 'AuthToken=' + response.data['authToken']
                 window.location.href = './';
             }
         })
