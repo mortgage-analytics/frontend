@@ -2,16 +2,15 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Outlet } from "react-router-dom";
-import axios from "axios"
 
 function AppNavbar() {
 
   const logout = () => {
-
+	document.cookie = "AuthToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;" // deletes cookie
   }
-
+ 
   const isLoggedIn = () => {
-	return false;
+	return document.cookie.includes("AuthToken")
   }
 
   return (
