@@ -2,11 +2,51 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Table } from 'react-bootstrap';
 import axios from "axios";
 import React, { useState, useEffect } from 'react';
+import { PieChart, Pie, Sector, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 
 const baseURL = "https://mortgagebackend.azurewebsites.net/api/data/applications/all";
 
 
+const data01 = [
+    { name: 'Group A', value: 700 },//RED
+    { name: 'Group B', value: 300 },//GREEN
+    { name: 'Group C', value: 500 },//YELLOW
+  ];
+
+const COLORS = ['#FF0000', '#00C49F', '#FFBB28'];
+
+const data = [
+    {
+      "applicationType": "CREDIT SUBMISSION",
+      "Applications": 52
+    },
+    {
+      "applicationType": "LOAN OFFER",
+      "Applications": 27
+    },
+    {
+      "applicationType": "ADVISOR REVIEW",
+      "Applications": 114
+    },
+    {
+      "applicationType": "COMPLETE",
+      "Applications": 26
+    },
+    {
+      "applicationType": "INFORMATION GATHERING",
+      "Applications": 120
+    },
+    {
+      "applicationType": "RECOMMENDATION",
+      "Applications": 7
+    },
+    {
+      "applicationType": "DRAWDOWN",
+      "Applications": 6
+    }
+  ]
 
 const Overview = () => {
 
@@ -40,6 +80,14 @@ const Overview = () => {
                 
             </Row>
             <br></br>
+            <Row className="justify-content-center">
+                <BarChart width={1300} height={300} data={data} >
+                    <XAxis dataKey="applicationType" />
+                    <YAxis />
+                    <Tooltip />
+                    <Bar dataKey="Applications" fill="#8884d8" />
+                </BarChart>
+            </Row>
             <Row className="justify-content-center">
             <Col  lg={8}>
                 <Table striped bordered hover size="sm">
