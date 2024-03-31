@@ -23,16 +23,19 @@ function AppNavbar() {
             <Nav className="me-auto">
                 <Nav.Link href="/data">Data</Nav.Link>
                 <Nav.Link href="/about">About</Nav.Link>
-				{
-					isLoggedIn() ? (
-						<Nav.Link href="/" onClick={logout}>Logout</Nav.Link>
-					) : (
-						<Nav.Link href="/login">Login</Nav.Link>
-					)
-				}
                 <Nav.Link href="/overview">Overview</Nav.Link>
             </Nav>
+            <Nav className="ml-auto">
+                {
+                  isLoggedIn() ? (
+                    <Nav.Link className="ms-auto" style={{color:"white"}} href="/" onClick={logout}>Logout</Nav.Link>
+                  ) : (
+                    <Nav.Link className="ms-auto" style={{color:"white"}} href="/login">Login</Nav.Link>
+                  )
+                }
+            </Nav>
             </Navbar.Collapse>
+
         </Container>
         </Navbar>
         <Outlet />
