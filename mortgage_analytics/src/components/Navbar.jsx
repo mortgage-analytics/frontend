@@ -21,9 +21,22 @@ function AppNavbar() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-                <Nav.Link href="/data">Data</Nav.Link>
                 <Nav.Link href="/about">About</Nav.Link>
-                <Nav.Link href="/overview">Overview</Nav.Link>
+                {
+                  isLoggedIn() ? (
+                      <Nav.Link href="/data">Data</Nav.Link>
+                  ) : (
+                    null
+                  )
+                }
+                {
+                  isLoggedIn() ? (
+                      <Nav.Link href="/overview">Overview</Nav.Link>
+                  ) : (
+                    null
+                  )
+                }
+                
             </Nav>
             <Nav className="ml-auto">
                 {
