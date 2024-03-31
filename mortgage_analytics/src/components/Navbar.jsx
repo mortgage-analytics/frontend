@@ -4,6 +4,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Outlet } from "react-router-dom";
 
 function AppNavbar() {
+
+  const logout = () => {
+	document.cookie = "AuthToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;" // deletes cookie
+  }
+ 
+  const isLoggedIn = () => {
+	return document.cookie.includes("AuthToken")
+  }
+
   return (
     <div>
         <Navbar expand="lg" className="bg-body-tertiary" bg="primary">
@@ -14,10 +23,19 @@ function AppNavbar() {
             <Nav className="me-auto">
                 <Nav.Link href="/data">Data</Nav.Link>
                 <Nav.Link href="/about">About</Nav.Link>
-                <Nav.Link href="/login">Login</Nav.Link>
                 <Nav.Link href="/overview">Overview</Nav.Link>
             </Nav>
+            <Nav className="ml-auto">
+                {
+                  isLoggedIn() ? (
+                    <Nav.Link className="ms-auto" style={{color:"white"}} href="/" onClick={logout}>Logout</Nav.Link>
+                  ) : (
+                    <Nav.Link className="ms-auto" style={{color:"white"}} href="/login">Login</Nav.Link>
+                  )
+                }
+            </Nav>
             </Navbar.Collapse>
+
         </Container>
         </Navbar>
         <Outlet />
