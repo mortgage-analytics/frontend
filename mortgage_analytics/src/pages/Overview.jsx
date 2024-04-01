@@ -2,7 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Table } from 'react-bootstrap';
 import axios from "axios";
 import React, { useState, useEffect } from 'react';
-
+import { getCookie } from '../util/Cookie'
 
 const baseURL = "https://mortgagebackend.azurewebsites.net/api/data/applications/all";
 
@@ -15,7 +15,7 @@ const Overview = () => {
     useEffect(() => {
         async function fetchApplicationData() {
             try {
-                const response = await axios.get(baseURL);
+                const response = await axios.get(baseURL, {headers: {Authorization: "Bearer " + getCookie("AuthToken")}});
                 setApplicationData(response.data); // Assuming response.data contains the data
                 console.log(applicationData)
             } catch (error) {
