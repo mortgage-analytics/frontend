@@ -2,7 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Table } from 'react-bootstrap';
 import axios from "axios";
 import React, { useState, useEffect } from 'react';
-import { getCookie } from '../util/Cookie'
+import { Link } from 'react-router-dom';
 
 const baseURL = "https://mortgagebackend.azurewebsites.net/api/data/applications/all";
 
@@ -15,7 +15,7 @@ const Overview = () => {
     useEffect(() => {
         async function fetchApplicationData() {
             try {
-                const response = await axios.get(baseURL, {headers: {Authorization: "Bearer " + getCookie("AuthToken")}});
+                const response = await axios.get(baseURL);
                 setApplicationData(response.data); // Assuming response.data contains the data
                 console.log(applicationData)
             } catch (error) {
@@ -55,10 +55,14 @@ const Overview = () => {
                     </thead>
                     <tbody>
                         {applicationData.map((item, index) => (
-                            <tr>
-                            <th key={index}>{index+1}</th>
+                            <tr key={index}>
+                                <th>{index + 1}</th>
+                                <th><a href={`.${window.location.pathname}/applications/${index}`}>
+                             {item.applicationStage}
+                            </a>
+                              
+                            </th>
                             <th key={index}>{item.applicationType}</th>
-                            <th key={index}>{item.applicationStage}</th>
                             <th key={index}>{item.mortgageAmountProposed}</th>
                             <th key={index}>{item.applicationStatus}</th>
                             <th key={index}>{item.leadSource}</th>
@@ -74,4 +78,3 @@ const Overview = () => {
 };
 
 export default Overview;
-
