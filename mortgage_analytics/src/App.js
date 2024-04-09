@@ -8,6 +8,7 @@ import Data from "./pages/Data";
 import LeadVApp from "./pages/LeadVApp";
 import SignUp from './pages/SignUp';
 import Overview from './pages/Overview';
+import ApplicationDetails from './pages/ApplicationDetails';
 import "react-bootstrap/dist/react-bootstrap.min.js"; 
 import DebtToIncome from './pages/DebtToIncome';
 import PropertyAppraisal from './pages/PropertyAppraisal';
@@ -28,6 +29,7 @@ function App() {
         <Route path="leadvapp" element={<LeadVApp />} />
         <Route path="sign-up" element={<SignUp />} />
         <Route path="overview" element={<Overview />} />
+        <Route path="application/:applicationNumber" element={<ApplicationDetails />} />
         <Route path="DebtToIncome" element={<DebtToIncome />} />
         <Route path="PropertyAppraisal" element={<PropertyAppraisal />} />
         <Route path="RegulatoryCompliance" element={<RegulatoryCompliance />} />

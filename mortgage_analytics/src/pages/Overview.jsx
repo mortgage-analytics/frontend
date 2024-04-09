@@ -2,6 +2,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Table } from 'react-bootstrap';
 import axios from "axios";
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { PieChart, Pie, Sector, Cell } from 'recharts';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { getCookie } from '../util/Cookie'
@@ -103,10 +104,14 @@ const Overview = () => {
                     </thead>
                     <tbody>
                         {applicationData.map((item, index) => (
-                            <tr>
-                            <th key={index}>{index+1}</th>
+                            <tr key={index}>
+                                <th>{index + 1}</th>
+                                <th><a href={`.${window.location.pathname}/applications/${index}`}>
+                             {item.applicationStage}
+                            </a>
+                              
+                            </th>
                             <th key={index}>{item.applicationType}</th>
-                            <th key={index}>{item.applicationStage}</th>
                             <th key={index}>{item.mortgageAmountProposed}</th>
                             <th key={index}>{item.applicationStatus}</th>
                             <th key={index}>{item.leadSource}</th>
@@ -122,4 +127,3 @@ const Overview = () => {
 };
 
 export default Overview;
-
