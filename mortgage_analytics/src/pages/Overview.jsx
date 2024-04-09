@@ -56,7 +56,7 @@ const Overview = () => {
     useEffect(() => {
         async function fetchApplicationData() {
             try {
-                const response = await axios.get(baseURL);
+                const response = await axios.get(baseURL, {headers: {Authorization: "Bearer " + getCookie("AuthToken")}});
                 setApplicationData(response.data); // Assuming response.data contains the data
                 console.log(applicationData)
             } catch (error) {
