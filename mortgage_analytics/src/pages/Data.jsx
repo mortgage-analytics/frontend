@@ -51,11 +51,9 @@ const Data = () => {
                   Red Bottlenecks (Long Wait Times)
                 </h5>
                 <ul>
-                  {redBottlenecks.map((redBottlenecks, index) => (
-                    <li key={index}>
-                      <a style={{color:"black", textAlign:"left"}} href={`/${redBottlenecks.replace(/\s+/g, '-').toLowerCase()}`}>{redBottlenecks}</a>
-                    </li>
-                  ))}
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/CreditHistory">Credit History</a></li>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/IncomeVerification">Income Verification</a></li>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/DebtToIncome">Debt To Income Ratio</a></li>
                 </ul>
               </div>
               <div style={{ backgroundColor: '#FFBB28', padding: '10px', borderRadius: '5px', marginBottom: '20px' }}>
@@ -63,11 +61,9 @@ const Data = () => {
                   Yellow Bottlenecks (Medium Wait Times)
                 </h5>
                 <ul>
-                  {yellowBottlenecks.map((yellowBottlenecks, index) => (
-                    <li key={index}>
-                      <a style={{color:"black", textAlign:"left"}}  href={`/${yellowBottlenecks}`}>{yellowBottlenecks}</a>
-                    </li>
-                  ))}
+                <li>   <a style={{color:"black", textAlign:"left"}} href="/PropertyAppraisal">Property Appraisal</a></li>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/DocumentationRequirements">Documentation Requirements</a></li>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/MarketConditions">Market Conditions</a></li>
                 </ul>
               </div>
               <div style={{ backgroundColor: '#00C49F', padding: '10px', borderRadius: '5px', marginBottom: '20px' }}>
@@ -75,11 +71,10 @@ const Data = () => {
                   Green Bottlenecks (Short Wait Times)
                 </h5>
                 <ul>
-                  {greenBottlenecks.map((greenBottlenecks, index) => (
-                    <li key={index}>
-                      <a style={{color:"black", textAlign:"left"}}  href={`/${greenBottlenecks}`}>{greenBottlenecks}</a>
-                    </li>
-                  ))}
+                <li>   <a style={{color:"black", textAlign:"left"}} href="/RegulatoryCompliance">Regulatory Compliance</a></li>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/ApplicantWorkHistory">Applicant Work History</a></li>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/DownPaymentIssues">Down Payment Issues</a></li>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/StringentUnderwritingStandards">Stringent Underwriting Standards</a></li>
                 </ul>
               </div>
           </Col>
