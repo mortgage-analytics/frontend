@@ -27,54 +27,71 @@ const data02 = [
 
 const COLORS = ['#FF0000', '#00C49F', '#FFBB28'];
 
-const INNERCOLORS = ['#FF0000', '#FF0000', '#FF0000', '#FFBB28', '#FFBB28', '#FFBB28', '#00C49F', '#00C49F', '#00C49F','#00C49F'];
+const INNERCOLORS = ['#FF0000', '#FF0000', '#FF0000', '#FFBB28', '#FFBB28', '#FFBB28', '#00C49F', '#00C49F', '#00C49F', '#00C49F'];
 
 const Data = () => {
+  const redBottlenecks = ['Credit History', 'Income Verification', 'Debt To Income Ratio'];
+  const yellowBottlenecks = ['Property Appraisal', 'Documentation Requirements', 'Market Conditions'];
+  const greenBottlenecks = ['Regulatory Compliance', 'Applicant Work History', 'Down Payment Issues', 'Stringent Underwriting Standards'];
+
   return (
     <div>
       <Container>
         <Row>
-          <Col>
+          <Col style={{disply:'flex', justifyContent:'left'}}>
             <header>
-              <h1 style={{ textAlign: "centre" }}>Bottlenecks</h1>
+            <br></br>
+              <h1>Bottlenecks</h1>
             </header>
-
-            <main style={{ marginTop: "20px", marginLeft: "100px", textAlign: "center" }}>
-              <p style={{ textAlign: "left" }}>Red (100+ Applications)</p>
-              <ul style={{ textAlign: "left" }}>
-                <li>Credit History and Score</li>
-                <li>Income Verification</li>
-                <li>Debt to Income Ratio</li>
-              </ul>
-              <p style={{ textAlign: "left" }}><span className="yellow-underline"><span className="black-highlight">Yellow (50-99 Applications)</span></span></p>
-              <ul style={{ textAlign: "left" }}>
-                <li>Property Appraisal</li>
-                <li>Documentation Requirements</li>
-                <li>Market Conditions</li>
-              </ul>
-              <p style={{ textAlign: "left" }}><span className="green-underline">Green (1-49 Applications)</span></p>
-              <ul style={{ textAlign: "left" }}>
-                <li>Regulatory Compliance</li>
-                <li>Applicant Work History</li>
-                <li>Down Payment Issues</li>
-                <li>Stringent Underwriting Standards</li>
-              </ul>
-            </main>
+            <p style={{ fontSize: '1.2em', fontWeight: 'bold' }}>There is a wide variety of bottlenecks that can occur during the mortgage application process.</p>
+            <p>Here is a summary of the bottlenecks based on wait times.</p>
+            <p>Click on a link to discover more information.</p>
+              <div style={{ backgroundColor: '#FA5F55', padding: '10px', borderRadius: '5px', marginBottom: '20px' }}>
+                <h5>
+                  Red Bottlenecks (Long Wait Times)
+                </h5>
+                <ul>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/CreditHistory">Credit History</a></li>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/IncomeVerification">Income Verification</a></li>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/DebtToIncome">Debt To Income Ratio</a></li>
+                </ul>
+              </div>
+              <div style={{ backgroundColor: '#FFBB28', padding: '10px', borderRadius: '5px', marginBottom: '20px' }}>
+                <h5>
+                  Yellow Bottlenecks (Medium Wait Times)
+                </h5>
+                <ul>
+                <li>   <a style={{color:"black", textAlign:"left"}} href="/PropertyAppraisal">Property Appraisal</a></li>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/DocumentationRequirements">Documentation Requirements</a></li>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/MarketConditions">Market Conditions</a></li>
+                </ul>
+              </div>
+              <div style={{ backgroundColor: '#00C49F', padding: '10px', borderRadius: '5px', marginBottom: '20px' }}>
+                <h5>
+                  Green Bottlenecks (Short Wait Times)
+                </h5>
+                <ul>
+                <li>   <a style={{color:"black", textAlign:"left"}} href="/RegulatoryCompliance">Regulatory Compliance</a></li>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/ApplicantWorkHistory">Applicant Work History</a></li>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/DownPaymentIssues">Down Payment Issues</a></li>
+                  <li>   <a style={{color:"black", textAlign:"left"}} href="/StringentUnderwritingStandards">Stringent Underwriting Standards</a></li>
+                </ul>
+              </div>
           </Col>
           <Col>
             <PieChart width={400} height={400}>
-              <Pie data={data01} dataKey="value" cx="50%" cy="50%" outerRadius={60} fill="#8884d8">          
+              <Pie data={data01} dataKey="value" cx="50%" cy="50%" outerRadius={60} fill="#8884d8">
                 {data01.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                  ))}
-              </Pie> 
+                ))}
+              </Pie>
               <Pie data={data02} dataKey="value" cx="50%" cy="50%" innerRadius={70} outerRadius={90} fill="#82ca9d" label>
                 {data02.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={INNERCOLORS[index % INNERCOLORS.length]} />
-                    ))}
-              </Pie>                 
+                  <Cell key={`cell-${index}`} fill={INNERCOLORS[index % INNERCOLORS.length]} />
+                ))}
+              </Pie>
             </PieChart>
-          </Col>  
+          </Col>
         </Row>
       </Container>
     </div>
